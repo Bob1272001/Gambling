@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FastAPI Betting System</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Betting System</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Select User</h2>
+            <label for="usersSelect">Username:</label>
+            <select id="usersSelect"></select>
+            <p id="currencyDisplay">Currency: Loading...</p>
+        </section>
+        <section>
+            <h2>Upcoming Matches</h2>
+            <table id="upcomingMatchesTable">
+                <thead>
+                    <tr>
+                        <th>Match ID</th>
+                        <th>Teams</th>
+                        <th>Time</th>
+                        <th>Odds</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+        <section>
+            <h2>Place a Bet</h2>
+            <form id="betForm">
+                <label for="matchId">Match ID:</label>
+                <input type="text" id="matchId" name="MatchID" required>
+                <label for="teamSelect">Team:</label>
+                <select id="teamSelect" name="Team">
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                </select>
+                <label for="amount">Bet Amount:</label>
+                <input type="number" id="amount" name="Amount" required>
+                <p id="oddsDisplay">Odds: Loading...</p>
+                <button type="submit">Place Bet</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Bets for Selected User</h2>
+            <table id="betsTable">
+                <thead>
+                    <tr>
+                        <th>Match ID</th>
+                        <th>Amount</th>
+                        <th>Odds</th>
+                        <th>Team</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+
+        <script src="/static/js/script.js"></script>
+    </main>
+</body>
+
+</html>

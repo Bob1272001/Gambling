@@ -1,0 +1,6 @@
+fastapi
+psycopg
+uvicorn
+statbotics
+time
+pytz
